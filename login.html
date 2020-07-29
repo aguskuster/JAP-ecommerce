@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Prueba</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800" rel="stylesheet">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="allLogin">
+        <div class="divleft">
+            <a href="#" class="sign-up text" onclick="signUp();">Sign Up</a>
+        </div>
+        <div class="divright">
+            <form action="index.html" method="POST">
+                <div class="imgcontainer">
+                    <img src="./img/avatar.png" alt="avatar" class="avatar">
+                </div>
+                <div class="container">
+                    <label for="uname" class="text"><b>Username</b></label>
+                    <input type="text" placeholder="&#128100; Username" name="uname" required>
+
+                    <label for="pwd" class="text"><b>Password</b></label>
+                    <input type="password" placeholder="&#128272; Password" name="pwd" required>
+                    <label class="text">
+                        <input type="checkbox" name="remember" checked >Remember me
+                       </label><br><br><br>
+                    <button type="submit" class="button">Login</button>
+
+                </div>
+                <div class="container">
+                    <span class="pwd"><a href="#">Forgot password?</a></span>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
