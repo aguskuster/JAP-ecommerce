@@ -1,0 +1,226 @@
+/* .loginButton{
+    background-color:grey; 
+    border: 2px solid black;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+   
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 8px;
+  
+}
+
+.loginButton:hover{
+    background-color: black;
+   
+    cursor: pointer;
+}
+
+
+*/
+
+
+/*body {
+    font-family: Raleway;
+    background: url(./img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 50%;
+    background-color: #B1D2DE;
+}
+
+form {
+    border: none;
+}
+
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 36px;
+    border: 0;
+}
+
+span.pwd {
+    float: right;
+    padding-top: 13px;
+}
+
+.allLogin {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 70%;
+    margin: auto;
+    margin-top: 8%;
+    background-color: black;
+    opacity: 0.7;
+    margin-bottom: 10%;
+}
+
+.divright {
+    vertical-align: top;
+    width: 450px;
+}
+
+.text {
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+a.sign-up {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 571px;
+}
+*/
+
+* {
+    font-family: Raleway;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/Background-eCommerce.png) no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+}
+
+.login-container {
+    width: 320px;
+    height: 420px;
+    background: white;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    opacity: 0.9;
+    border-style: solid;
+    box-shadow: 7px -8px 8px 5px rgba(0, 0, 0, 0.72);
+}
+
+.login-container .img-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    border-style: solid;
+    box-shadow: 7px -8px 8px 5px rgba(0, 0, 0, 0.72);
+}
+
+.login-container label {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    display: block;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 1px solid coral;
+    box-sizing: border-box;
+    background: transparent;
+    height: 40px;
+    color: black;
+    font-size: 16px;
+    outline: none;
+}
+
+.login-container .button {
+    background-color: #2a58ad;
+    font-weight: bold;
+    color: white;
+    padding: 12px 18px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 23px;
+    outline: none;
+}
+
+.login-container .button:hover {
+    opacity: 0.9;
+    background-color: #51A8D6;
+    color: black;
+    box-shadow: -1px 0px 9px 6px rgba(0, 0, 0, 0.4);
+}
+
+.login-container a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: black;
+}
+
+.login-container a:hover {
+    color: blue;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.logos {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    border: none;
+    outline: none;
+    border-radius: 200px 200px 200px 200px;
+    border: 0px solid #ffffff;
+    padding: 8px;
+}
+
+.logos:hover {
+    cursor: pointer;
+    box-shadow: -1px 0px 9px 6px rgba(0, 0, 0, 0.4);
+}
+
+#googleLogin {
+    background-image: url(../img/GoogleLogo300x300.png);
+}
+
+#facebookLogin {
+    margin-left: 20px;
+    background-image: url(../img/fbLogo300x300.png);
+}
+
+#githubLogin {
+    margin-left: 20px;
+    background-image: url(../img/GitHubLogo300x300.png);
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+}
