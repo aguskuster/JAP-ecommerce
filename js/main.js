@@ -1,14 +1,3 @@
-window.addEventListener('load', () => {
-    document.getElementById("addSignUp").style.display = "none";
-    setTimeout(carga, 1000)
-
-    function carga() {
-        document.getElementById('swapper').className = 'hide'
-
-        document.getElementById('contenido').className = 'center'
-    }
-
-})
 
 
 const googleButton = document.querySelector('#googleLogin');
@@ -38,6 +27,19 @@ fbButton.addEventListener('click', e => {
 
 });
 
+const GhButton = document.querySelector('#githubLogin');
+GhButton.addEventListener('click', e => {
+    const provider = new firebase.auth.GithubAuthProvider();
+    firebase.auth().signInWithPopup(provider)
+        .then(result => {
+            location.href = "index.html";
+        })
+        .catch(err => {
+            console.log(err);
+        })
+
+});
+
 
 function LogOut() {
     firebase.auth().signOut().then(function() {
@@ -52,7 +54,7 @@ function checkLogin() {
     let pass = document.getElementById('pwd').value;
 
     if (user != "" && pass != "") {
-        location.href = "../index.html"
+        location.href = "JAP-ecommerce/index.html"
     } else {
         alert("Comprube sus datos")
     }
