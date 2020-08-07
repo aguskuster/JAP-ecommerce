@@ -6,42 +6,38 @@ const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678
 const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
+const LIST_URL = "https://api.npoint.io/d320ff9b8570a1f1c8fe";
 
-var showSpinner = function(){
-  document.getElementById("spinner-wrapper").style.display = "block";
+//Le agregamos el .style a showSpinner
+var showSpinner = function() {
+    document.getElementById("spinner-wrapper").style.display = "block";
 }
 
-var hideSpinner = function(){
-  document.getElementById("spinner-wrapper").style.display = "none";
+//Le agregamos el .style a hideSpinner
+var hideSpinner = function() {
+    document.getElementById("spinner-wrapper").style.display = "none";
 }
 
-var getJSONData = function(url){
+var getJSONData = function(url) {
     var result = {};
-    showSpinner();
+    //Cambiamos el fetchh por fetch, además de agregar url 
     return fetch(url)
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      }else{
-        throw Error(response.statusText);
-      }
-    })
-    .then(function(response) {
-          result.status = 'ok';
-          result.data = response;
-          hideSpinner();
-          return result;
-    })
-    .catch(function(error) {
-        result.status = 'error';
-        result.data = error;
-        hideSpinner();
-        return result;
-    });
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                //Pusimos Error con minuscula 
+                throw error(response.statusText);
+            }
+        })
+        .then(function(response) {
+            result.status = 'ok';
+            result.data = response;
+            return result;
+        })
+        .catch(function(error) {
+            result.status = 'error';
+            result.data = error;
+            return result;
+        });
 }
-
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
-document.addEventListener("DOMContentLoaded", function(e){
-});
