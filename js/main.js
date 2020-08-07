@@ -5,7 +5,7 @@ googleButton.addEventListener('click', e => {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
         .then(result => {
-            location.href = "index.html";
+            location.href = "../index.html";
         })
         .catch(err => {
             console.log(err);
@@ -19,7 +19,7 @@ fbButton.addEventListener('click', e => {
     const provider = new firebase.auth.FacebookAuthProvider();
     firebase.auth().signInWithPopup(provider)
         .then(result => {
-            location.href = "index.html";
+            location.href = "../index.html";
         })
         .catch(err => {
             console.log(err);
@@ -32,7 +32,7 @@ GhButton.addEventListener('click', e => {
     const provider = new firebase.auth.GithubAuthProvider();
     firebase.auth().signInWithPopup(provider)
         .then(result => {
-            location.href = "index.html";
+            location.href = "../index.html";
         })
         .catch(err => {
             console.log(err);
@@ -54,7 +54,7 @@ function checkLogin() {
     let pass = document.getElementById('pwd').value;
 
     if (user != "" && pass != "") {
-        location.href = "JAP-ecommerce/index.html"
+        location.href = "../index.html"
     } else {
         alert("Comprube sus datos")
     }
