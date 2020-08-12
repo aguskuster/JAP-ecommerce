@@ -22,7 +22,7 @@ function onSignIn(googleUser) {
 
     console.log("ID Token: " + id_token);
 
-    location.href = "../index.html"
+    location.href = "../cover.html"
 
 }
 
@@ -31,7 +31,7 @@ function checkLogin() {
     let pass = document.getElementById('pwd').value;
 
     if (user != "" && pass != "") {
-        location.href = "../index.html"
+        location.href = "../cover.html"
     } else {
         alert("Comprube sus datos")
     }
