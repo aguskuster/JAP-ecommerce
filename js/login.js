@@ -31,7 +31,7 @@ function checkLogin() {
     let pass = document.getElementById('pwd').value;
 
     if (user != "" && pass != "") {
-        location.href = "/index.html"
+        location.href = "https://aguskuster.github.io/JAP-ecommerce/"
     } else {
         alert("Comprube sus datos")
     }
