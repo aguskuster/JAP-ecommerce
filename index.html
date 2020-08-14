@@ -133,27 +133,14 @@
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
-    <script>
-        function signOut() {
-            var auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut().then(function() {
-                alert('User signed out.');
-                location.href = "../login.html"
-            });
-        }
-
-        function onLoad() {
-            gapi.load('auth2', function() {
-                gapi.auth2.init();
-            });
-        }
-    </script>
+  
     <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
     <script src="js/login.js"></script>
+  
+    <script src="js/logOut.js"></script>
 </body>
 
 </html>

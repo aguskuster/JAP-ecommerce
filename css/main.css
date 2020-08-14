@@ -149,6 +149,10 @@ input[type=number] {
     .hit-the-floor {
       text-align: center;
     }
+
+#LogOut:hover{
+    text-decoration: underline;
+} 
     
 
  
