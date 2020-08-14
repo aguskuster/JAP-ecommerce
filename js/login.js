@@ -22,7 +22,7 @@ function onSignIn(googleUser) {
 
     console.log("ID Token: " + id_token);
 
-    location.href = "https://aguskuster.github.io/JAP-ecommerce/index.html"
+    location.href = "../index.html"
 
 }
 
@@ -30,10 +30,12 @@ function checkLogin() {
     let user = document.getElementById('usr').value;
     let pass = document.getElementById('pwd').value;
 
-    if (user != "" && pass != "") {
-        location.href = "https://aguskuster.github.io/JAP-ecommerce/index.html"
+    if (user.trim() === "" || pass.trim() === "") {
+        alert("Comprube sus datos");
     } else {
-        alert("Comprube sus datos")
+        location.href = "../index.html";
     }
 
 }
+
+

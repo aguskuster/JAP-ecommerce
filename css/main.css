@@ -1,97 +1,14 @@
-/* .loginButton{
-    background-color:grey; 
-    border: 2px solid black;
-    color: white;
-    padding: 10px 24px;
-    text-align: center;
-   
-    display: inline-block;
-    font-size: 12px;
-    border-radius: 8px;
-  
-}
 
-.loginButton:hover{
-    background-color: black;
-   
-    cursor: pointer;
-}
-
-
-*/
-
-
-/*body {
-    font-family: Raleway;
-    background: url(./img/background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    height: 50%;
-    background-color: #B1D2DE;
-}
-
-form {
-    border: none;
-}
-
-
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-img.avatar {
-    width: 30%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 36px;
-    border: 0;
-}
-
-span.pwd {
-    float: right;
-    padding-top: 13px;
-}
-
-.allLogin {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 70%;
-    margin: auto;
-    margin-top: 8%;
-    background-color: black;
-    opacity: 0.7;
-    margin-bottom: 10%;
-}
-
-.divright {
-    vertical-align: top;
-    width: 450px;
-}
-
-.text {
-    color: white;
-}
-
-a {
-    color: white;
-}
-
-a.sign-up {
-    position: absolute;
-    margin-left: 200px;
-    margin-top: 571px;
-}
-*/
 
 * {
     font-family: Raleway;
 }
-
-body {
+.wcome{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+#bgLogin {
     margin: 0;
     padding: 0;
     background: url(../img/Background-eCommerce.png) no-repeat center top;
@@ -102,8 +19,8 @@ body {
 .login-container {
     width: 320px;
     height: 420px;
-    background: white;
-    color: black;
+    background: grey;
+    color: skyblue;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -131,6 +48,8 @@ body {
     padding: 0;
     font-weight: 400;
     display: block;
+   
+    color:white;
 }
 
 input[type=text],
@@ -141,17 +60,18 @@ input[type=password] {
     border: none;
     border-bottom: 1px solid coral;
     box-sizing: border-box;
+    background-color: transparent;
     background: transparent;
     height: 40px;
-    color: black;
+    color: white;
     font-size: 16px;
     outline: none;
 }
 
 .login-container .button {
-    background-color: #2a58ad;
+    background-color: white;
     font-weight: bold;
-    color: white;
+    color: black;
     padding: 12px 18px;
     margin: 8px 0;
     border: none;
@@ -169,11 +89,18 @@ input[type=password] {
     box-shadow: -1px 0px 9px 6px rgba(0, 0, 0, 0.4);
 }
 
+ #h1Product{
+     text-align:center;
+     font-size: 80px;
+     border-bottom-color: solid grey;
+ }
+ 
 .login-container a {
     text-decoration: none;
     font-size: 14px;
     line-height: 20px;
     color: black;
+    outline: none;
 }
 
 .login-container a:hover {
@@ -206,21 +133,22 @@ input[type=number] {
     box-shadow: -1px 0px 9px 6px rgba(0, 0, 0, 0.4);
 }
 
-#googleLogin {
-    background-image: url(../img/GoogleLogo300x300.png);
-}
-
-#facebookLogin {
-    margin-left: 20px;
-    background-image: url(../img/fbLogo300x300.png);
-}
-
-#githubLogin {
-    margin-left: 20px;
-    background-image: url(../img/GitHubLogo300x300.png);
-}
-
 .centrar {
     display: flex;
     justify-content: center;
 }
+
+.hit-the-floor {
+    color: #5AB1E6;
+    font-size: 90px;
+    font-weight: bold;
+    font-family: Helvetica;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    }
+    
+    .hit-the-floor {
+      text-align: center;
+    }
+    
+
+ 

@@ -31,18 +31,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
-<body>
+<body id="bgLogin">
     <div class="login-container" id="lcontain">
         <img src="img/Logo1_E-shop.png" alt="Logo Empresa" class="img-logo">
         <form id="signup-form">
-
+            <label for="uname" class="text wcome"> <u> <b>Welcome</b></u></label>
+            <br>
+            
             <!-- Username -->
             <label for="uname" class="text"><b>Username</b></label>
-            <input type="text" placeholder="&#128100;" name="uname" class="usr" id="usr" required>
+            <input type="text" placeholder="" name="uname" class="usr" id="usr" required>
 
             <!-- Password -->
             <label for="pwd" class="text"><b>Password</b></label>
-            <input type="password" placeholder="&#128272;" name="pwd" id="pwd" required>
+            <input type="password" placeholder="" name="pwd" id="pwd" required>
 
             <!-- Login -->
             <input type="button" id="btnLogin" class="button" onclick="checkLogin();" value="Log In">
@@ -51,6 +53,7 @@
                 <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
             </div>
         </form>
+        
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>

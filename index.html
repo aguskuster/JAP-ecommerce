@@ -36,16 +36,23 @@
 </head>
 
 <body>
-    <nav class="site-header sticky-top py-1 bg-dark">
-        <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-            <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-            <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-            <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-            <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-            <a class="py-2 d-none d-md-inline-block" onclick="signOut();" id="LogOut" style="color: white; cursor: pointer;">Log Out</a>
-        </div>
-    </nav>
+    
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+              <img src="./img/Logo1_E-shop.png" width="30"  style="border-radius: 50px;"height="30" class="d-inline-block align-top" alt="">
+              e-Shop
+            </a>
+            <div class="container d-flex flex-column flex-md-row d-inline-block align-top ">
+                <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+                <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+                <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+                <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+                <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+                <a class="py-2 d-none d-md-inline-block" onclick="signOut();" id="LogOut" style="color: darkblue; cursor: pointer;">Log Out</a>
+            </div>
+          </nav>
+     
+    
     <main role="main">
         <section class="jumbotron text-center">
             <div class="m-5">
@@ -132,7 +139,7 @@
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function() {
                 alert('User signed out.');
-                location.href = "https://aguskuster.github.io/JAP-ecommerce/login.html"
+                location.href = "../login.html"
             });
         }
 
