@@ -3,7 +3,7 @@
         var auth2 = gapi.auth2.getAuthInstance();
         auth2.signOut().then(function() {
             alert('User signed out.');
-            location.href = "../index.html"
+            location.href = "aguskuster.github.io/JAP-ecommerce/index.html"
         });
     }
 
