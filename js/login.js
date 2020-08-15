@@ -22,7 +22,7 @@ function onSignIn(googleUser) {
 
     console.log("ID Token: " + id_token);
 
-    location.href = "aguskuster.github.io/JAP-ecommerce/cover.html"
+    location.href = "https://aguskuster.github.io/JAP-ecommerce/cover.html"
 
 }
 
@@ -33,7 +33,7 @@ function checkLogin() {
     if (user.trim() === "" || pass.trim() === "") {
         alert("Comprube sus datos");
     } else {
-        location.href = "aguskuster.github.io/JAP-ecommerce/cover.html";
+        location.href = "https://aguskuster.github.io/JAP-ecommerce/cover.html";
     }
 
 }
