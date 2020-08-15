@@ -126,6 +126,9 @@ footer p {
         transform: rotate(360deg);
     }
 }
+#LogOut:hover{
+    text-decoration: underline;
+} 
 
 #spinner-wrapper {
     position: fixed;

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="680344540172-6ior7kepo4uub9ka1eh2r2jb656lgr60.apps.googleusercontent.com">
-
+    
     <link rel="apple-touch-icon" sizes="57x57" href="./img/favico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./img/favico/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./img/favico/apple-icon-72x72.png">
@@ -23,123 +22,57 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <title>eMercado - Todo lo que busques está aquí</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="680344540172-6ior7kepo4uub9ka1eh2r2jb656lgr60.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    <title>Login 3.0</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
-<body>
-    
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">
-              <img src="./img/Logo1_E-shop.png" width="30"  style="border-radius: 50px;"height="30" class="d-inline-block align-top" alt="">
-              e-Shop
-            </a>
-            <div class="container d-flex flex-column flex-md-row d-inline-block align-top ">
-                <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-                <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-                <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-                <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-                <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-                <a class="py-2 d-none d-md-inline-block" onclick="signOut();" id="LogOut" style="color: darkblue; cursor: pointer;">Log Out</a>
-            </div>
-          </nav>
-     
-    
-    <main role="main">
-        <section class="jumbotron text-center">
-            <div class="m-5">
-                <h1></h1>
-            </div>
-        </section>
-        <div class="album py-5 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat1.jpg">
-                            <h3 class="m-3">Autos (122)</h3>
-                            <div class="card-body">
-                                <p class="card-text">Los mejores precios en autos 0 kilómetro, de alta y media gama.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat2.jpg">
-                            <h3 class="m-3">Juguetes (354)</h3>
-                            <div class="card-body">
-                                <p class="card-text">Encuentra aquí los mejores precios para niños/as de cualquier edad.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat3.jpg">
-                            <h3 class="m-3">Muebles (157)</h3>
-                            <div class="card-body">
-                                <p class="card-text">Muebles antiguos, nuevos y para ser armados por uno mismo.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat4.jpg">
-                            <h3 class="m-3">Herramientas (452)</h3>
-                            <div class="card-body">
-                                <p class="card-text">Herramientas para cualquier tipo de trabajo.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat5.jpg">
-                            <h3 class="m-3">Computadoras (724)</h3>
-                            <div class="card-body">
-                                <p class="card-text">Todo en cuanto a computadoras, para uso de oficina y/o juegos.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat6.jpg">
-                            <h3 class="m-3">Vestimenta (841)</h3>
-                            <div class="card-body">
-                                <p class="card-text">Gran variedad de ropa, nueva y de segunda mano.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <a type="button" class="btn btn-light btn-lg btn-block" href="categories.html">Ver todas</a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer class="text-muted">
-        <div class="container">
-            <p class="float-right">
-                <a href="#">Volver arriba</a>
-            </p>
-            <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-            <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-        </div>
-    </footer>
+<body id="bgLogin">
+    <div class="login-container" id="lcontain">
+        <img src="img/Logo1_E-shop.png" alt="Logo Empresa" class="img-logo">
+        <form id="signup-form">
+            <label for="uname" class="text wcome"> <u> <b>Welcome</b></u></label>
+            <br>
+            
+            <!-- Username -->
+            <label for="uname" class="text"><b>Username</b></label>
+            <input type="text" placeholder="" name="uname" class="usr" id="usr" required>
 
-  
-    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+            <!-- Password -->
+            <label for="pwd" class="text"><b>Password</b></label>
+            <input type="password" placeholder="" name="pwd" id="pwd" required>
+
+            <!-- Login -->
+            <input type="button" id="btnLogin" class="button" onclick="checkLogin();" value="Log In">
+            <br><br>
+            <div class="centrar">
+                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+            </div>
+        </form>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
+
+
+    <!-- BOOSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+    </script>
+
+
+    <!-- Custom Code -->
+
     <script src="js/init.js"></script>
     <script src="js/login.js"></script>
-  
     <script src="js/logOut.js"></script>
 </body>
 

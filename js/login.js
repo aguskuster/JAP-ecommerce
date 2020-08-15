@@ -22,7 +22,7 @@ function onSignIn(googleUser) {
 
     console.log("ID Token: " + id_token);
 
-    location.href = "../index.html"
+    location.href = "../cover.html"
 
 }
 
@@ -33,7 +33,7 @@ function checkLogin() {
     if (user.trim() === "" || pass.trim() === "") {
         alert("Comprube sus datos");
     } else {
-        location.href = "../index.html";
+        location.href = "../cover.html";
     }
 
 }
