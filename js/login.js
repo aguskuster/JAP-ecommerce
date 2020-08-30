@@ -32,7 +32,7 @@ function checkLogin() {
     if (user.trim() === "" || pass.trim() === "") {
         alert("Comprube sus datos");
     } else {
-        localStorage.setItem("img", "../img/icon.jpg");
+        localStorage.setItem("img", "icon.jpg");
         localStorage.setItem("user", user);
         location.href = "https://aguskuster.github.io/JAP-ecommerce/cover.html";
         
