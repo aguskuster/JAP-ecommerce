@@ -28,11 +28,11 @@ function onSignIn(googleUser) {
 function checkLogin() {
     let user = document.getElementById('usr').value;
     let pass = document.getElementById('pwd').value;
-    let img= "../img/icon.jpg"
+    let img= "https://i.imgur.com/M0d2gtC.jpg"
     if (user.trim() === "" || pass.trim() === "") {
         alert("Comprube sus datos");
     } else {
-        localStorage.setItem("img", "icon.jpg");
+        localStorage.setItem("img", img);
         localStorage.setItem("user", user);
         location.href = "https://aguskuster.github.io/JAP-ecommerce/cover.html";
         
