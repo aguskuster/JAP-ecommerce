@@ -4,6 +4,8 @@
         auth2.signOut().then(function() {
             alert('User signed out.');
             location.href = "https://aguskuster.github.io/JAP-ecommerce/index.html"
+            localStorage.removeItem("user");
+            localStorage.removeItem("img");
         });
     }
 

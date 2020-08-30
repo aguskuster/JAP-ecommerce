@@ -35,22 +35,45 @@
   <body>
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="cover.html">
-        <img src="./img/Logo1_E-shop.png" width="30"  style="border-radius: 50px;"height="30" class="d-inline-block align-top" alt="">
-        e-Shop
+          <img src="./img/Logo1_E-shop.png" width="30" style="border-radius: 50px;" height="30"
+              class="d-inline-block align-top" alt="">
+          e-Shop
       </a>
       <div class="container d-flex flex-column flex-md-row d-inline-block align-top ">
-          <a class="py-2 d-none d-md-inline-block" href="cover.html">Inicio</a>
-          <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-          <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-          <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-          <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-          <a class="py-2 d-none d-md-inline-block" onclick="signOut();" id="LogOut" style="color: darkblue; cursor: pointer;">Log Out</a>
+        <a class="py-2 d-none d-md-inline-block zoomIN" href="cover.html">Inicio</a>
+        <a class="py-2 d-none d-md-inline-block zoomIN" href="categories.html">Categorías</a>
+        <a class="py-2 d-none d-md-inline-block zoomIN" href="products.html">Productos</a>
+        <a class="py-2 d-none d-md-inline-block zoomIN" href="sell.html">Vender</a>
+        
+  
+  
+  
+          <div class="dropdown show  " style="border: solid 1px skyblue; border-radius:20px;">
+              <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="border-radius:20px;">
+                  <img id="profilePic" style="border-radius: 50px;width:35px; height: 35px; border:solid 1px;" src="" alt=""
+                      class="d-inline-block align-top">
+                  <a class="py-2 d-none d-md-inline-block" href="#" role="button"
+                      id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius:50px; margin-left: 4px;">
+                  </a>
+              </button>
+  
+              <div class="dropdown-menu " aria-labelledby="dropdownMenuLink" style="border-radius:10px;">
+                  <a class="dropdown-item" style="color:#4D96C2" href="my-profile.html">Mi Perfil</a>
+                  <a class="dropdown-item" style="color:#4D96C2" href="cart.html">Carrito de Compra</a>
+                  <a class="dropdown-item" style="color:#4D96C2" onclick="signOut();" id="LogOut" style="cursor: pointer; border-radius:50px;">Cerrar Sesión</a>
+                  
+              </div>
+          </div>
+  
       </div>
-    </nav>
+  </nav>
+
     <main role="main" class="pb-5">
         <div class="text-center p-4">
-            <h2>Categorías</h2>
-            <p class="lead">Verás aquí todas las categorías del sitio.</p>
+          <div class="hit-the-floor">Categorias</div>
+          <p class="lead">Verás aquí todas las categorías del sitio.</p>
+        </div>
+            
         </div>
         <div class="container">
             <div class="row">

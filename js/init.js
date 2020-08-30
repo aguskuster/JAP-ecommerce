@@ -8,6 +8,11 @@ const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 const LIST_URL = "https://api.npoint.io/d320ff9b8570a1f1c8fe";
 
+document.addEventListener("DOMContentLoaded", function(e) {
+        setUser();
+        onLoad();
+});
+
 
 //Le agregamos el .style a showSpinner
 var showSpinner = function() {
@@ -43,3 +48,15 @@ var getJSONData = function(url) {
         });
         
 }
+
+function setUser(){
+    let usr = localStorage.getItem("user"); 
+
+    document.getElementById("dropdownMenuLink").innerHTML = usr;
+   
+    var img = document.getElementById("profilePic"); 
+    img.src = localStorage.getItem("img")
+
+}
+
+

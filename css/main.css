@@ -17,54 +17,88 @@
 }
 
 .login-container {
-    width: 320px;
-    height: 420px;
-    background: grey;
+
+    width: 450px;
+    height: 650px;
+    background:#232323;
     color: skyblue;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 52%;
+    left: 80%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
     opacity: 0.9;
     border-style: solid;
-    box-shadow: 7px -8px 8px 5px rgba(0, 0, 0, 0.72);
+    box-shadow: 7px -8px 8px 5px rgb(73, 192, 192);
+    box-shadow: 1px 3px 9px 3px rgba(41,253,255,0.61);
+    animation-name: loginAnim;
+    animation-duration: 3s;
 }
+    @keyframes picLogo{
+    from{
+        top: -40px;
+        left: calc(46% - 50px);
+        transform: rotate(0deg);
+    }
+    to{
+        top: -40px;
+        left: calc(46% - 50px);
+        transform: rotate(360deg);
+    }
+    }
+    @keyframes loginAnim {
+    from{
+    top: 52%;
+    transform: translate(-50%, -50%);
+    left: 100%;
+     }
+    to{
+    top: 52%;
+    left: 80%;
+    transform: translate(-50%, -50%);   
+     }
+    }
 
 .login-container .img-logo {
-    width: 100px;
-    height: 100px;
+    animation-name: picLogo;
+    animation-duration: 2s;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     position: absolute;
-    top: -50px;
-    left: calc(50% - 50px);
+    top: -40px;
+    left: calc(46% - 50px);
     border-style: solid;
-    box-shadow: 7px -8px 8px 5px rgba(0, 0, 0, 0.72);
+    box-shadow: 1px 3px 9px 3px rgba(41,253,255,0.61);
 }
 
 .login-container label {
-    margin: 0;
+    margin-top: 45px;
     padding: 0;
-    font-weight: 400;
+    font-size:20px;
     display: block;
-   
     color:white;
 }
+.m-3:hover{
+    text-decoration:underline;
 
-input[type=text],
+}
+
+.login-container  input[type=text],
 input[type=password] {
     width: 100%;
-    padding: 12px 20px;
+    padding: 22px 20px;
     margin: 8px 0;
     border: none;
-    border-bottom: 1px solid coral;
+    font-size: 20px;
+    
     box-sizing: border-box;
     background-color: transparent;
     background: transparent;
-    height: 40px;
+    height: 100px;
     color: white;
-    font-size: 16px;
+    font-size: 6px;
     outline: none;
 }
 
@@ -73,6 +107,7 @@ input[type=password] {
     font-weight: bold;
     color: black;
     padding: 12px 18px;
+    
     margin: 8px 0;
     border: none;
     cursor: pointer;
@@ -85,7 +120,7 @@ input[type=password] {
 .login-container .button:hover {
     opacity: 0.9;
     background-color: #51A8D6;
-    color: black;
+    color: white;
     box-shadow: -1px 0px 9px 6px rgba(0, 0, 0, 0.4);
 }
 
@@ -95,13 +130,7 @@ input[type=password] {
      border-bottom-color: solid grey;
  }
  
-.login-container a {
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 20px;
-    color: black;
-    outline: none;
-}
+
 
 .login-container a:hover {
     color: blue;
@@ -110,49 +139,24 @@ input[type=password] {
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
-    margin: 0;
+    margin: 10;
 }
 
 input[type=number] {
     -moz-appearance: textfield;
 }
 
-.logos {
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    border: none;
-    outline: none;
-    border-radius: 200px 200px 200px 200px;
-    border: 0px solid #ffffff;
-    padding: 8px;
-}
 
-.logos:hover {
-    cursor: pointer;
-    box-shadow: -1px 0px 9px 6px rgba(0, 0, 0, 0.4);
-}
 
 .centrar {
     display: flex;
     justify-content: center;
 }
 
-.hit-the-floor {
-    color: #5AB1E6;
-    font-size: 90px;
-    font-weight: bold;
-    font-family: Helvetica;
-    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
-    }
-    
-    .hit-the-floor {
-      text-align: center;
-    }
+#btnLogin{
+    margin-top: 80px;
+}
 
-#LogOut:hover{
-    text-decoration: underline;
-} 
     
 
  

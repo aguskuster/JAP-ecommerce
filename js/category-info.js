@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             let productCriteriaHTML = document.getElementById("productCriteria");
         
             categoryNameHTML.innerHTML = category.name;
-            categoryDescriptionHTML.innerHTML = category.description;
+            categoryDescriptionHTML.innerHTML = "Encuentra aqui la veriedad de vehiculos que desees, todos al mejor precio !";
             productCountHTML.innerHTML = category.productCount;
             productCriteriaHTML.innerHTML = category.productCriteria;
 

@@ -1,10 +1,8 @@
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
-document.addEventListener("DOMContentLoaded", function(e) {
 
-});
-
+var Username;
 function onSignIn(googleUser) {
     // Useful data for your client-side scripts:
     var profile = googleUser.getBasicProfile();
@@ -16,24 +14,28 @@ function onSignIn(googleUser) {
     console.log("Email: " + profile.getEmail());
 
 
-
     // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;
 
     console.log("ID Token: " + id_token);
+    localStorage.setItem("user", profile.getName());
+    localStorage.setItem("img", profile.getImageUrl());
 
     location.href = "https://aguskuster.github.io/JAP-ecommerce/cover.html"
-
+    
 }
 
 function checkLogin() {
     let user = document.getElementById('usr').value;
     let pass = document.getElementById('pwd').value;
-
+    let img= "../img/icon.jpg"
     if (user.trim() === "" || pass.trim() === "") {
         alert("Comprube sus datos");
     } else {
+        localStorage.setItem("img", img);
+        localStorage.setItem("user", user);
         location.href = "https://aguskuster.github.io/JAP-ecommerce/cover.html";
+        
     }
 
 }

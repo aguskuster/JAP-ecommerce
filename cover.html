@@ -3,8 +3,10 @@
 <html lang="en">
 
 <head>
+    
     <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="680344540172-6ior7kepo4uub9ka1eh2r2jb656lgr60.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"
+        content="680344540172-6ior7kepo4uub9ka1eh2r2jb656lgr60.apps.googleusercontent.com">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="apple-touch-icon" sizes="57x57" href="./img/favico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./img/favico/apple-icon-60x60.png">
@@ -27,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>eMercado - Todo lo que busques está aquí</title>
-
+    
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <!-- Bootstrap core CSS -->
@@ -36,31 +38,73 @@
 </head>
 
 <body>
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="cover.html">
+            <img src="./img/Logo1_E-shop.png" width="30" style="border-radius: 50px;" height="30"
+                class="d-inline-block align-top" alt="">
+            e-Shop
+        </a>
+        <div class="container d-flex flex-column flex-md-row d-inline-block align-top ">
+            <a class="py-2 d-none d-md-inline-block zoomIN" href="cover.html">Inicio</a>
+            <a class="py-2 d-none d-md-inline-block zoomIN" href="categories.html">Categorías</a>
+            <a class="py-2 d-none d-md-inline-block zoomIN" href="products.html">Productos</a>
+            <a class="py-2 d-none d-md-inline-block zoomIN" href="sell.html">Vender</a>
+            
     
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="cover.html">
-              <img src="./img/Logo1_E-shop.png" width="30"  style="border-radius: 50px;"height="30" class="d-inline-block align-top" alt="">
-              e-Shop
-            </a>
-            <div class="container d-flex flex-column flex-md-row d-inline-block align-top ">
-                <a class="py-2 d-none d-md-inline-block" href="cover.html">Inicio</a>
-                <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-                <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-                <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-                <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-                <a class="py-2 d-none d-md-inline-block" onclick="signOut();" id="LogOut" style="color: darkblue; cursor: pointer;">Log Out</a>
+    
+    
+            <div class="dropdown show  " style="border: solid 1px skyblue; border-radius:20px;">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="border-radius:20px;">
+                    <img id="profilePic" style="border-radius: 50px;width:35px; height: 35px; border:solid 2px  skyblue;" src="" alt=""
+                        class="d-inline-block align-top">
+                    <a class="py-2 d-none d-md-inline-block" href="#" role="button"
+                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius:50px; margin-left: 4px;">
+                    </a>
+                </button>
+    
+                <div class="dropdown-menu " aria-labelledby="dropdownMenuLink" style="border-radius:10px;">
+                    <a class="dropdown-item" style="color:#4D96C2" href="my-profile.html">Mi Perfil</a>
+                    <a class="dropdown-item" style="color:#4D96C2" href="cart.html">Carrito de Compra</a>
+                    <a class="dropdown-item" style="color:#4D96C2" onclick="signOut();" id="LogOut" style="cursor: pointer; border-radius:50px;">Cerrar Sesión</a>
+                    
+                </div>
             </div>
-          </nav>
-     
     
+        </div>
+    </nav>
+
+
     <main role="main">
-        <section class="jumbotron text-center">
-            <div class="m-5">
-                <h1></h1>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="3000" >
+                <img src="./img/prueba1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-interval="3000" >
+                <img src="./img/cover_backBlueEshop.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-interval="3000" >
+                <img src="./img/prueba2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-interval="3000" >
+                <img src="./img/prueba3.png" class="d-block w-100" alt="...">
+              </div>
             </div>
-        </section>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+      
         <div class="album py-5 bg-light">
             <div class="container">
+
+                
                 <div class="row">
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
@@ -76,7 +120,8 @@
                             <img class="bd-placeholder-img card-img-top" src="img/cat2.jpg">
                             <h3 class="m-3">Juguetes (354)</h3>
                             <div class="card-body">
-                                <p class="card-text">Encuentra aquí los mejores precios para niños/as de cualquier edad.</p>
+                                <p class="card-text">Encuentra aquí los mejores precios para niños/as de cualquier edad.
+                                </p>
                             </div>
                         </a>
                     </div>
@@ -133,13 +178,13 @@
         </div>
     </footer>
 
-  
+
     <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
     <script src="js/login.js"></script>
-  
+
     <script src="js/logOut.js"></script>
 </body>
 

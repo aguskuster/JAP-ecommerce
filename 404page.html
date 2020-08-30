@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id"
         content="680344540172-6ior7kepo4uub9ka1eh2r2jb656lgr60.apps.googleusercontent.com">
@@ -20,22 +21,24 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./img/favico/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favico/favicon-16x16.png">
-
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <title>eMercado - Todo lo que busques está aquí</title>
-
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
+
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="cover.html">
             <img src="./img/Logo1_E-shop.png" width="30" style="border-radius: 50px;" height="30"
@@ -47,15 +50,16 @@
             <a class="py-2 d-none d-md-inline-block zoomIN" href="categories.html">Categorías</a>
             <a class="py-2 d-none d-md-inline-block zoomIN" href="products.html">Productos</a>
             <a class="py-2 d-none d-md-inline-block zoomIN" href="sell.html">Vender</a>
-            
+
 
 
 
             <div class="dropdown show  " style="border: solid 1px skyblue; border-radius:20px;">
                 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"
                     style="border-radius:20px;">
-                    <img id="profilePic" style="border-radius: 50px;width:35px; height: 35px; border:solid 1px;" src=""
-                        alt="" class="d-inline-block align-top">
+                    <img id="profilePic"
+                        style="border-radius: 50px;width:35px; height: 35px; border:solid 2px  skyblue;" src="" alt=""
+                        class="d-inline-block align-top">
                     <a class="py-2 d-none d-md-inline-block" href="#" role="button" id="dropdownMenuLink"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                         style="border-radius:50px; margin-left: 4px;">
@@ -74,100 +78,15 @@
         </div>
     </nav>
 
-    <main role="main" class="pb-5">
-
-        <div class="hit-the-floor">Productos</div>
-        </div>
-        <div class="container">
-
-
-            <div class="row">
 
 
 
-                <div>
-                    <input class="form-control" type="text" placeholder="Search ..." id="search">
-                    <button class="btn " id="btn" style="display:none"></button>
-                </div>
-                
-                <div class="col text-right">
+    <div class="contenedor404" style=" margin-top:5%;display: flex; justify-content: center; align-items:center;">
 
-                    <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
-                      
-                        <label class="btn btn-light active" id="sortAsc" >
-                            <input type="radio" name="options" autocomplete="off" checked >Rel. ASC.
-                        </label>
-                         
-                        <label class="btn btn-light" id="sortDesc">
-                            <input type="radio" name="options" autocomplete="off">Costo DESC.
-                        </label>
-
-                        <label class="btn btn-light" id="sortByCount">
-                            
-                            <input type="radio" name="options" autocomplete="off"><i
-                                class="fas fa-sort-amount-down mr-1"></i>Costo ASC.
-                        </label>
-                        
-                       
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row justify-content-end">
-                <div class="col-md-6"></div>
-                <div class="col-md-6 col-sm-12 mb-1 container">
-                    <div class="row container p-0 m-0">
-                        
-                        <div class="col">
-                            <p class="font-weight-normal text-right my-2">Costo :</p>
-                        </div>
-                        <div class="col">
-                            <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
-                        </div>
-                        <div class="col">
-                            <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
-                        </div>
-                        <div class="col-3 p-0">
-                            <div class="btn-group" role="group">
-                                <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
-                                <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
-
-                            </div>
-                          
-                        </div>
-                       
-                    </div>
-                </div>
-               
-            </div>
-            <div class="row">
-                <div class="list-group" id="cat-list-container">
-                </div>
-            </div>
-        </div>
-    </main>
-    <div class="container">
-
-
-        <div class="row">
-
-            <div class="row align-items-center " id="cat-list-container">
-
-            </div>
-
-        </div>
+        <img src="./img/404page.png" style="width:40%; height: 40%;" alt="">
     </div>
-    </main>
-    <div id="spinner-wrapper">
-        <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <footer class="text-muted bg-light">
+
+    <footer class="text-muted bg-light" x>
         <div class="container">
           <p class="float-right">
             <a href="#">Volver arriba</a>
@@ -176,13 +95,13 @@
           <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
         </div>
       </footer>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/logOut.js"></script>
-    <script src="js/login.js"></script>
-    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
-</body>
-
-</html>
+      
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/init.js"></script>
+      <script src="js/categories.js"></script>
+      <script src="js/logOut.js"></script>
+      <script src="js/login.js"></script>
+      <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    </body>
+  </html>
