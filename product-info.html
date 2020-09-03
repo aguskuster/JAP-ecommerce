@@ -4,8 +4,10 @@
 
 <head>
   <meta name="google-signin-scope" content="profile email">
-  <meta name="google-signin-client_id" content="680344540172-6ior7kepo4uub9ka1eh2r2jb656lgr60.apps.googleusercontent.com">
+  <meta name="google-signin-client_id"
+    content="680344540172-6ior7kepo4uub9ka1eh2r2jb656lgr60.apps.googleusercontent.com">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="apple-touch-icon" sizes="57x57" href="./img/favico/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./img/favico/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="./img/favico/apple-icon-72x72.png">
@@ -36,47 +38,98 @@
 <body>
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="cover.html">
-        <img src="./img/Logo1_E-shop.png" width="30" style="border-radius: 50px;" height="30"
-            class="d-inline-block align-top" alt="">
-        e-Shop
+      <img src="./img/Logo1_E-shop.png" width="30" style="border-radius: 50px;" height="30"
+        class="d-inline-block align-top" alt="">
+      e-Shop
     </a>
     <div class="container d-flex flex-column flex-md-row d-inline-block align-top ">
       <a class="py-2 d-none d-md-inline-block zoomIN" href="cover.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block zoomIN" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block zoomIN" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block zoomIN" href="sell.html">Vender</a>
-      
 
 
 
-        <div class="dropdown show  " style="border: solid 1px skyblue; border-radius:20px;">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="border-radius:20px;">
-                <img id="profilePic" style="border-radius: 50px;width:35px; height: 35px; border:solid 1px;" src="" alt=""
-                    class="d-inline-block align-top">
-                <a class="py-2 d-none d-md-inline-block" href="#" role="button"
-                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius:50px; margin-left: 4px;">
-                </a>
-            </button>
 
-            <div class="dropdown-menu " aria-labelledby="dropdownMenuLink" style="border-radius:10px;">
-                <a class="dropdown-item" style="color:#4D96C2" href="my-profile.html">Mi Perfil</a>
-                <a class="dropdown-item" style="color:#4D96C2" href="cart.html">Carrito de Compra</a>
-                <a class="dropdown-item" style="color:#4D96C2" onclick="signOut();" id="LogOut" style="cursor: pointer; border-radius:50px;">Cerrar Sesión</a>
-                
-            </div>
+      <div class="dropdown show  " style="border: solid 1px skyblue; border-radius:20px;">
+        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"
+          style="border-radius:20px;">
+          <img id="profilePic" style="border-radius: 50px;width:35px; height: 35px; border:solid 1px;" src="" alt=""
+            class="d-inline-block align-top">
+          <a class="py-2 d-none d-md-inline-block" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" style="border-radius:50px; margin-left: 4px;">
+          </a>
+        </button>
+
+        <div class="dropdown-menu " aria-labelledby="dropdownMenuLink" style="border-radius:10px;">
+          <a class="dropdown-item" style="color:#4D96C2" href="my-profile.html">Mi Perfil</a>
+          <a class="dropdown-item" style="color:#4D96C2" href="cart.html">Carrito de Compra</a>
+          <a class="dropdown-item" style="color:#4D96C2" onclick="signOut();" id="LogOut"
+            style="cursor: pointer; border-radius:50px;">Cerrar Sesión</a>
+
         </div>
+      </div>
 
     </div>
-</nav>
+  </nav>
 
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 13/09/2020) y Entrega 4 (Fecha de entrega: 20/09/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <div class="hit-the-floor">Informacion del Producto</div>
+
+  <div id="contenedorProduct">
+
+    <p class="lead" style="text-align: center;">Encontrarás aquí toda la información del producto seleccionado.</p>
+    <p class="small alert-warning py-3" style="text-align: center;"><strong>Nota: </strong>por simplicidad, cualquiera
+      sea el producto seleccionado
+      previamente, siempre se visualizará el presente: <strong>Chevrolet Onix Joy</strong>.</p>
+    <br>
+    <h4>Infromacion del Producto</h4>
+
+    <p id="productName"></p>
+    <p id="productDescription"></p>
+    <p id="productImage">Imagen del Producto</p>
+
+    <div id="productImagesGallery"></div> <br>
+    <div>
+      <p class="text-muted" id="productCount"></p>
+
     </div>
+
+    <div>
+      <b>
+        <p id="productCost"></p>
+      </b>
+      <button type="button" id="btnCompra" class="btn btn-success"><a style="color:white"
+          href="404page.html">Comprar</a></button>
+    </div>
+    <br>
+    <br>
+    <h4 style="text-align: center;">Seccion de Comentarios</h4>
+    <br><br>
+    <div id="SecciondeComentarios">
+
+
+      <section id="seccionComentarios" class="comments"></section>
+      <section id="miComentario">
+        <div style="background-color: white; margin-left:2%;">
+
+          <p><b style="font-size: 18px;margin-left:3%;">Escriba su opinion:</b></p>
+
+          <textarea id="textArea" rows="3" cols="60" style="margin-left:3%;display: inline-block;"
+            placeholder="escriba aquí.."></textarea>
+          <label style="margin-left:2%;" for="number">Puntuación:</label>
+          <input id="number" min="0" max="5"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number" maxlength="1" />/5
+          <br>
+          <button id="btnPublic" type="button" class="btn btn-info"
+            style="margin-bottom:20px;margin-left:3%;">Publicar</button>
+        </div>
+      </section>
+    </div>
+
   </div>
+  <div></div>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -86,14 +139,7 @@
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
   </footer>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
+
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
@@ -101,6 +147,10 @@
   <script src="js/logOut.js"></script>
   <script src="js/login.js"></script>
   <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 </body>
 
 </html>

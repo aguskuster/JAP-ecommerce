@@ -38,6 +38,9 @@ function sortCategories(criteria, array){
     return result;
 }
 
+
+
+
 function showCategoriesList(){
 
     let htmlContentToAppend = "";
@@ -47,9 +50,10 @@ function showCategoriesList(){
         if (((minCount == undefined) || (minCount != undefined && parseInt(category.cost) >= minCount)) &&
             ((maxCount == undefined) || (maxCount != undefined && parseInt(category.cost) <= maxCount))){
 
-                htmlContentToAppend += `    
+                htmlContentToAppend += `
+                <a href="https://aguskuster.github.io/JAP-ecommerce/product-info.html" class=" list-group-item-action">   
                 <div class="list-group-item list-group-item-action">
-                <div class="row ">
+                <div class="row">
                     <div class="col-3">
                         <img src="` + category.imgSrc + `" class="img-thumbnail">
                     </div>
@@ -64,7 +68,7 @@ function showCategoriesList(){
                         
                     </div>
                 </div>
-            </div>
+            </div> </a>
                                            `
         }
 
