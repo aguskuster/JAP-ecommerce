@@ -86,7 +86,7 @@ function showProInfo(array, arrayComments) {
     productCost.innerHTML = "Precio de compra: " + productInfo.cost + " " + productInfo.currency;
 
     for (let i = 0; i < productInfo.images.length; i++) {
-        imgs += '<img class="img" src="../' + productInfo.images[i] + '" width="240px" height="180px" style="padding:10px border-radius:10px">'
+        imgs += '<img class="img" src="'+ productInfo.images[i] +'" width="240px" height="180px" style="padding:10px border-radius:10px">'
         document.getElementById("productImagesGallery").innerHTML = imgs;
     };
 
