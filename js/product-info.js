@@ -21,7 +21,7 @@ document.getElementById("btnPublic").addEventListener("click", function () {
     let opinion = document.getElementById("textArea").value;
     let rate = document.getElementById("number").value;
 
-    if (opinion.trim() == "" || rate > 5) {
+    if (opinion.trim() == "" || rate > 5 || rate ==="" ) {
         Swal.fire({
             title: "Comentario no publicado !",
             text: "Verifica los datos que has ingresado.",
@@ -35,7 +35,7 @@ document.getElementById("btnPublic").addEventListener("click", function () {
         });
 
     } else {
-
+        
         Swal.fire({
             title: "Comentario publicado !",
             text: "Gracias por tu comentario, lo tendremos en cuenta.",
