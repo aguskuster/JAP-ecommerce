@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+<head>
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="680344540172-6ior7kepo4uub9ka1eh2r2jb656lgr60.apps.googleusercontent.com">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="./img/favico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./img/favico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./img/favico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./img/favico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./img/favico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./img/favico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./img/favico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./img/favico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/favico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./img/favico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favico/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>e-Shop - Todo lo que busques está aquí</title>
+<meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="680344540172-6ior7kepo4uub9ka1eh2r2jb656lgr60.apps.googleusercontent.com">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/dropzone.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="cover.html">
+        <img src="./img/Logo1_E-shop.png" width="30" style="border-radius: 50px;" height="30"
+            class="d-inline-block align-top" alt="">
+        e-Shop
+    </a>
+    <div class="container d-flex flex-column flex-md-row d-inline-block align-top ">
+      <a class="py-2 d-none d-md-inline-block zoomIN" href="cover.html">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block zoomIN" href="categories.html">Categorías</a>
+      <a class="py-2 d-none d-md-inline-block zoomIN" href="products.html">Productos</a>
+      <a class="py-2 d-none d-md-inline-block zoomIN" href="sell.html">Vender</a>
+      
+
+
+
+        <div class="dropdown show  " style="border: solid 1px skyblue; border-radius:20px;">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="border-radius:20px;">
+                <img id="profilePic" style="border-radius: 50px;width:35px; height: 35px; border:solid 1px;" src="" alt=""
+                    class="d-inline-block align-top">
+                <a class="py-2 d-none d-md-inline-block" href="#" role="button"
+                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius:50px; margin-left: 4px;">
+                </a>
+            </button>
+
+            <div class="dropdown-menu " aria-labelledby="dropdownMenuLink" style="border-radius:10px;">
+                <a class="dropdown-item" style="color:#4D96C2" href="my-profile.html">Mi Perfil</a>
+                <a class="dropdown-item" style="color:#4D96C2" href="cart.html">Carrito de Compra</a>
+                <a class="dropdown-item" style="color:#4D96C2" onclick="signOut();" id="LogOut" style="cursor: pointer; border-radius:50px;">Cerrar Sesión</a>
+                
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+  <div class="container p-5">
+    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
+      <h4 class="alert-heading">¡A trabajar! :)</h4>
+      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
+      <hr>
+      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    </div>
+  </div>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dropzone.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/logOut.js"></script>
+  <script src="js/login.js"></script>
+  <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+</body>
+
+</html>
