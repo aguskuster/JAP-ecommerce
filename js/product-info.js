@@ -95,17 +95,17 @@ function showProInfo(array, arrayComments) {
 
     for (let comment in arrayComments) {
         comments += `<article class="comment">
-        <a class="comment-img" href="#non">
-          <img src="https://i.imgur.com/M0d2gtC.jpg" alt="" width="50" height="50">
-        </a>
-        <div class="comment-body">
-          <div class="text">
-            <p>`+ comentariosArray[comment].description + `</p>
-          </div>
-          <p style="display:inline-block; margin-right:3%;" class="attribution">by <a href="#non">`+ comentariosArray[comment].user + `</a> ` + comentariosArray[comment].dateTime + `<br><br> Puntuación:<em style="margin-left:4px;color:skyblue;font-family:arial;">` + comentariosArray[comment].score + `/5</em></p>
-          
-        </div>
-      </article>`
+                                                                            <a class="comment-img" href="#non">
+                                                                            <img src="`+ image + `" alt="" width="50" height="50">
+                                                                            </a>
+                                                                                 <div class="comment-body">
+                                                                                    <div class="text">
+                                                                                          <p>`+ opinion + `</p>
+                                                                                    </div>
+                                                                                            <p style="display:inline-block; margin-right:3%;" class="attribution">by <a href="#non">`+ usuario + `</a> ` + dateStr + `<br><br> Puntuación:<em style="margin-left:4px;color:skyblue;font-family:arial;">` + rate + `/5</em></p>
+      
+                                                                                </div>
+                                                                            </article>`
 
         document.getElementById("seccionComentarios").innerHTML = comments;
     };
