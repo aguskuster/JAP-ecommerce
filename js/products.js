@@ -155,25 +155,24 @@ const filtrito = () => {
     for (let product of currentCategoriesArray) {
         let car = product.name.toLowerCase();
         if (car.indexOf(textSearched) !== -1) {
-            resultado.innerHTML += `
-                <a href="https://aguskuster.github.io/JAP-ecommerce/product-info.html" class=" list-group-item-action">   
-                <div class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + category.imgSrc + `" class="img-thumbnail">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">` + category.name + `</h4>
-                            <small class="text-muted">` + category.soldCount + ` artículos vendidos</small>
-                        </div>
-                        <div class="text-muted">` + category.description + `</div>
-                        <br>               
-                         <div class="text-muted"> <b>` + category.cost + " " + category.currency + ` </b></div>
-                        
-                    </div>
+            resultado.innerHTML += `    
+            <div class="list-group-item list-group-item-action">
+            <div class="row ">
+                <div class="col-3">
+                    <img src="` + product.imgSrc + `" class="img-thumbnail">
                 </div>
-            </div> </a>
+                <div class="col">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h4 class="mb-1">` + product.name + `</h4>
+                        <small class="text-muted">` + product.soldCount + ` artículos vendidos</small>
+                    </div>
+                    <div class="text-muted">` + product.description + `</div>
+                    <br>               
+                     <div class="text-muted"> <b>` + product.cost + " " + product.currency + ` </b></div>
+                    
+                </div>
+            </div>
+        </div>
                                        `
         }
     }
