@@ -2,10 +2,9 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 
-// @ts-check
+
 
 document.addEventListener("DOMContentLoaded", function(e){
 
 });
 
-a.2:CanvasRenderingContext2D
