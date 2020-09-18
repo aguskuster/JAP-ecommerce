@@ -196,9 +196,7 @@ a.custom-card:hover {
     height:100%;
     
 }
-#contenedorProduct h4 {
-    text-decoration-line: underline;
-}
+
 
 #productName {
     margin-top:4%;
@@ -334,5 +332,18 @@ a.custom-card:hover {
     border-radius: 10px;
 }
 
+.prodRelated{
+    width:100%;
+}
+.prodRelated h3{
+    text-align: center;
+    text-decoration-line: underline;
+    margin-bottom: 20px;
+}
 
-
+#prodRelatedcon{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}

@@ -4,6 +4,7 @@
 
 var productInfo = [];
 var comentariosArray = [];
+var prodRel = [];
 var d = new Date();
 var date = d.getDate();
 var month = d.getMonth() + 1;
@@ -15,13 +16,14 @@ var usuario = localStorage.getItem("user");
 var image = localStorage.getItem("img");
 var dateStr = year + "-" + month + "-" + date + " " + hour + ":" + min + ":" + sec;
 var comments = "";
+var productsRel = "";
 
 document.getElementById("btnPublic").addEventListener("click", function () {
 
     let opinion = document.getElementById("textArea").value;
     let rate = document.getElementById("number").value;
 
-    if (opinion.trim() == "" || rate > 5 || rate ==="" ) {
+    if (opinion.trim() == "" || rate > 5 || rate === "") {
         Swal.fire({
             title: "Comentario no publicado !",
             text: "Verifica los datos que has ingresado.",
@@ -35,7 +37,7 @@ document.getElementById("btnPublic").addEventListener("click", function () {
         });
 
     } else {
-        
+
         Swal.fire({
             title: "Comentario publicado !",
             text: "Gracias por tu comentario, lo tendremos en cuenta.",
@@ -48,7 +50,7 @@ document.getElementById("btnPublic").addEventListener("click", function () {
             stopKeydownPropagation: true,
         });
 
-         comments += `<article class="comment">
+        comments += `<article class="comment">
                                                                             <a class="comment-img" href="#non">
                                                                             <img src="`+ image + `" alt="" width="50" height="50">
                                                                             </a>
@@ -71,7 +73,7 @@ document.getElementById("btnPublic").addEventListener("click", function () {
 
 
 
-function showProInfo(array, arrayComments) {
+function showProInfo(array, arrayComments, arrayRel) {
 
 
     let imgs = "";
@@ -86,7 +88,7 @@ function showProInfo(array, arrayComments) {
     productCost.innerHTML = "Precio de compra: " + productInfo.cost + " " + productInfo.currency;
 
     for (let i = 0; i < productInfo.images.length; i++) {
-        imgs += '<img class="img" src="'+ productInfo.images[i] +'" width="240px" height="180px" style="padding:10px border-radius:10px">'
+        imgs += '<img class="img" src="' + productInfo.images[i] + '" width="240px" height="180px" style="padding:10px border-radius:10px">'
         document.getElementById("productImagesGallery").innerHTML = imgs;
     };
 
@@ -110,24 +112,45 @@ function showProInfo(array, arrayComments) {
         document.getElementById("seccionComentarios").innerHTML = comments;
     };
 
+    for (let productsRelated in arrayRel) {
+        
+        for (i = 0; i < array.relatedProducts.length; i++) {
+            
+            if (productsRelated == array.relatedProducts[i]) {
+
+                productsRel += 
+                            `    
+                            <div class="row" style="display:inline-block">
+                            <div class"col-md-2">
+                              <div class="card  text-left m-4" style="width: 18rem;">
+                                <img src="` + arrayRel[productsRelated].imgSrc + `" class="card-img-top">
+                          
+                                <div class="card-body">
+                                  <h5 class="" id="carName">` + arrayRel[productsRelated].name + ` </h5>
+                                  <p class="card-text" style="height: 96px">` + arrayRel[productsRelated].description + ` <br> <b>` +
+                                      arrayRel[productsRelated].cost + " " + arrayRel[productsRelated].currency + `</b></p>
+                                  <a href="404page.html" class="btn btn-primary" id="btnVerMas" onclick="cancelFunction();">Ver más</a>
+                                 
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                     `
+
+        }}
+
+        document.getElementById("prodRelatedcon").innerHTML = productsRel
+    };
 
 
 
 
 
-    /*   let comments = "<br>";
-  
-      for (let comment in arrayComments) {
-          comments += '<img src="https://i.imgur.com/M0d2gtC.jpg" alt="" style="margin-right:30px; border-radius:60px" with="60px" height="50px" class="img-circle">'
-          comments += '<strong >' + comentariosArray[comment].user.toUpperCase() + '</strong>:<br>';
-          comments += '<p style="margin-left:4%;">' + comentariosArray[comment].description + '</p> <br> <small>' + " " + comentariosArray[comment].dateTime + '</small> ';
-          comments += ' <br>';
-          comments += 'Calificacion: <strong id="Stars">' +  + '/5</strong>';
-          comments += '<br> <hr>';
-          document.getElementById("seccionComentarios").innerHTML = comments;
-      }
-   */
+
 };
+
+
 
 
 document.addEventListener("DOMContentLoaded", function (e) {
@@ -135,7 +158,19 @@ document.addEventListener("DOMContentLoaded", function (e) {
         if (resultObj.status == "ok") {
             productInfo = resultObj.data;
 
-            showProInfo(productInfo, comentariosArray);
+           
+        } else {
+            location.href = "404page.html"
+        }
+    });
+    getJSONData(PRODUCTS_URL).then(function (resultObj) {
+        if (resultObj.status == "ok") {
+
+            prodRel = resultObj.data;
+
+            
+        } else {
+            location.href = "404page.html"
         }
     });
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function (resultObj) {
@@ -143,11 +178,17 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
             comentariosArray = resultObj.data;
 
-            showProInfo(productInfo, comentariosArray);
+            showProInfo(productInfo, comentariosArray, prodRel);
+        } else {
+            location.href = "404page.html"
         }
     });
+  
 
 });
+
+
+
 
 
 
