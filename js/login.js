@@ -21,7 +21,7 @@ function onSignIn(googleUser) {
     localStorage.setItem("user", profile.getName());
     localStorage.setItem("img", profile.getImageUrl());
 
-    location.href = "cover.html";
+    location.href = "../cover.html";
     
 }
 
@@ -34,7 +34,7 @@ function checkLogin() {
     } else {
         localStorage.setItem("img", img);
         localStorage.setItem("user", user);
-        location.href = "cover.html";
+        location.href = "../cover.html";
         
     }
 
