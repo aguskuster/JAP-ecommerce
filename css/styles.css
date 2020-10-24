@@ -347,3 +347,15 @@ a.custom-card:hover {
     justify-content:center;
     flex-wrap: wrap;
 }
+
+ .iconSize{
+     
+     font-size: 50px;
+ }
+
+.metPago{
+    display:inline-block;
+    margin-left: 60px;
+    margin-right: auto;
+    margin-top: 20px;
+}
