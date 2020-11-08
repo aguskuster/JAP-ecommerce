@@ -6,9 +6,20 @@ let apellido = document.getElementById("miPerfilApellido");
 let edad = document.getElementById("miPerfilEdad");
 let email = document.getElementById("miPerfilEmail");
 let telefono = document.getElementById("miPerfilTelefono");
-let img = document.getElementById("myProfilepicture");
-let changeImg = document.getElementById("myProfileImg")
+let imgUser = document.getElementById("myProfilepicture");
 
+
+
+var input, img, url;
+var input = document.querySelector("input[type=file]");
+img = document.querySelector("#myProfileImg");
+
+input.addEventListener("change", (event) => {
+    url = URL.createObjectURL(event.target.files[0]);
+    imgUser.value = event.target.files[0].name;
+    img.src = url;
+    localStorage.setItem("img", img.src = url);
+});
 
 function traerDatosdeUsuario() {
    
@@ -23,20 +34,16 @@ function traerDatosdeUsuario() {
         "imgURL" : img.value
     }
     localStorage.setItem("Usuario",JSON.stringify(usuario));
-    localStorage.setItem('img', img.value)
+    
 }   
 
 document.getElementById("guardarUsu").addEventListener('click', function(){
     traerDatosdeUsuario();
-    location.href = "my-profile.html";
+    window.location.reload();
 })
 
 
-function cambiar(){
-    var pdrs = document.getElementById('file-upload').files;
-    localStorage.setItem('img', pdrs)
-    
-}
+
 
 
 
@@ -50,8 +57,8 @@ function cargarDatosdeUsuario(){
     edad.value =  parsedUser.edad
     email.value =  parsedUser.email
     telefono.value =  parsedUser.telefono
-    changeImg.src = localStorage.getItem("img")
-    img.value = localStorage.getItem("img")
+    img.src = localStorage.getItem("img")
+    
 
 
 }
