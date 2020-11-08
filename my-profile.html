@@ -4,7 +4,8 @@
 
 <head>
   <meta name="google-signin-scope" content="profile email">
-  <meta name="google-signin-client_id" content="680344540172-6ior7kepo4uub9ka1eh2r2jb656lgr60.apps.googleusercontent.com">
+  <meta name="google-signin-client_id"
+    content="680344540172-6ior7kepo4uub9ka1eh2r2jb656lgr60.apps.googleusercontent.com">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="apple-touch-icon" sizes="57x57" href="./img/favico/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./img/favico/apple-icon-60x60.png">
@@ -54,46 +55,79 @@
 <body>
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="cover.html">
-        <img src="./img/Logo1_E-shop.png" width="30" style="border-radius: 50px;" height="30"
-            class="d-inline-block align-top" alt="">
-        e-Shop
+      <img src="./img/Logo1_E-shop.png" width="30" style="border-radius: 50px;" height="30"
+        class="d-inline-block align-top" alt="">
+      e-Shop
     </a>
     <div class="container d-flex flex-column flex-md-row d-inline-block align-top ">
       <a class="py-2 d-none d-md-inline-block zoomIN" href="cover.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block zoomIN" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block zoomIN" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block zoomIN" href="sell.html">Vender</a>
-      
 
 
-        <div class="dropdown show  " style="border: solid 1px skyblue; border-radius:20px;">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="border-radius:20px;">
-                <img id="profilePic" style="border-radius: 50px;width:35px; height: 35px; border:solid 1px;" src="" alt=""
-                    class="d-inline-block align-top">
-                <a class="py-2 d-none d-md-inline-block" href="#" role="button"
-                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius:50px; margin-left: 4px;">
-                </a>
-            </button>
 
-            <div class="dropdown-menu " aria-labelledby="dropdownMenuLink" style="border-radius:10px;">
-                <a class="dropdown-item" style="color:#4D96C2" href="my-profile.html">Mi Perfil</a>
-                <a class="dropdown-item" style="color:#4D96C2" href="cart.html">Carrito de Compra</a>
-                <a class="dropdown-item" style="color:#4D96C2" onclick="signOut();" id="LogOut" style="cursor: pointer; border-radius:50px;">Cerrar Sesión</a>
-                
-            </div>
+      <div class="dropdown show  " style="border: solid 1px skyblue; border-radius:20px;">
+        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"
+          style="border-radius:20px;">
+          <img id="profilePic" style="border-radius: 50px;width:35px; height: 35px; border:solid 1px;" src="" alt=""
+            class="d-inline-block align-top">
+          <a class="py-2 d-none d-md-inline-block" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" style="border-radius:50px; margin-left: 4px;">
+          </a>
+        </button>
+
+        <div class="dropdown-menu " aria-labelledby="dropdownMenuLink" style="border-radius:10px;">
+          <a class="dropdown-item" style="color:#4D96C2" href="my-profile.html">Mi Perfil</a>
+          <a class="dropdown-item" style="color:#4D96C2" href="cart.html">Carrito de Compra</a>
+          <a class="dropdown-item" style="color:#4D96C2" onclick="signOut();" id="LogOut"
+            style="cursor: pointer; border-radius:50px;">Cerrar Sesión</a>
+
         </div>
+      </div>
 
     </div>
-</nav>
+  </nav>
+  <div class="hit-the-floor">Mi Perfil</div>
 
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
+  <div class="myProfileContainer">
+    <div id="myProfile">
       <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+      <center>
+
+        <h3>Datos de Usuario</h3>
+        <br>
+        <img src="./img/icon.jpg" alt="" id="myProfileImg"><br><br>
+        URL: <input type="text" class="form-control" id="myProfilepicture">
+        <label for="file-upload" class="subir">
+           Subir archivo
+        </label>
+        <input id="file-upload" onchange='cambiar()' type="file" style='display: none;' />
+        <div id="info"></div>
+        <!-- <button type="button" id="btnInputFile" class="btn btn-primary">Buscar</button> -->
+
+      </center>
+    </div>
+    <div class="formularioDatos">
+      <label for="nombre">Nombre<b>*</b>: </label>
+      <input type="text" class="form-control" id="miPerfilNombre" required>
+      <br>
+      <label for="apellido">Apellido<b>*</b>: </label>
+      <input type="text" class="form-control" id="miPerfilApellido" required>
+      <br>
+      <label for="edad">Edad: </label>
+      <input type="text" class="form-control" id="miPerfilEdad">
+      <br>
+      <label for="email">Email: </label>
+      <input type="text" class="form-control" id="miPerfilEmail">
+      <br>
+      <label for="telefono">Telefono <b>*</b>: </label>
+      <input type="text" class="form-control" id="miPerfilTelefono" required>
+      <br>
+      <button type="button" class="btn btn-primary" id="guardarUsu">Guardar</button>
     </div>
   </div>
+
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>

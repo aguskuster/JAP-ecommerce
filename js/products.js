@@ -51,7 +51,8 @@ function showCategoriesList(){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(category.cost) <= maxCount))){
 
                 htmlContentToAppend += `
-                <a href="product-info.html" class=" list-group-item-action">   
+                <div class="row">
+                <a href="../product-info.html" class=" list-group-item-action">   
                 <div class="list-group-item list-group-item-action">
                 <div class="row">
                     <div class="col-3">
@@ -69,7 +70,8 @@ function showCategoriesList(){
                     </div>
                 </div>
             </div> </a>
-                                           `
+
+             </div>                              `
         }
 
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
@@ -156,7 +158,7 @@ const filtrito = () => {
         let car = product.name.toLowerCase();
         if (car.indexOf(textSearched) !== -1) {
             resultado.innerHTML += `    
-            <a href="product-info.html" style="text-decoration: none;">
+            <a href="../product-info.html" style="text-decoration: none;">
             <div class="list-group-item list-group-item-action">
             <div class="row ">
                 <div class="col-3">

@@ -359,3 +359,72 @@ a.custom-card:hover {
     margin-right: auto;
     margin-top: 20px;
 }
+
+.myProfileContainer{
+    width: 500px;
+    height: auto;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    background-color: whitesmoke;
+    border-radius: 20px;
+
+    
+}
+
+#myProfile h3 {
+    text-align: center;
+    padding:10px;
+}
+
+#myProfile img {
+    width:100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+#myProfile input {
+    display:inline-block;
+    width:200px;
+}
+
+#myProfile button{
+    display:inline-block;
+    width:80px;
+    margin-left: 10px;
+}
+.formularioDatos{
+    padding:30px;
+}
+.formularioDatos b {
+    color:blue;
+}
+
+
+
+#responsiveMenu{
+    display:none;
+}
+
+
+.subir{
+    padding: 5px 10px;
+    background: #0087F7;
+    color:#fff;
+    border:0px solid #fff;
+    border-radius: 10px;
+}
+ 
+.subir:hover{
+    color:#fff;
+    background: blue;
+}
+
+
+@media (max-width:860px){
+    #responsiveMenu{
+        display:block;
+    } 
+}

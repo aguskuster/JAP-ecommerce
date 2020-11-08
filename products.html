@@ -42,12 +42,12 @@
                 class="d-inline-block align-top" alt="">
             e-Shop
         </a>
-        <div class="container d-flex flex-column flex-md-row d-inline-block align-top ">
+        <div class="container d-flex flex-column flex-md-row d-inline-block align-top " id="Navegator">
             <a class="py-2 d-none d-md-inline-block zoomIN" href="cover.html">Inicio</a>
             <a class="py-2 d-none d-md-inline-block zoomIN" href="categories.html">Categorías</a>
             <a class="py-2 d-none d-md-inline-block zoomIN" href="products.html">Productos</a>
             <a class="py-2 d-none d-md-inline-block zoomIN" href="sell.html">Vender</a>
-            
+
 
 
 
@@ -63,119 +63,109 @@
                 </button>
 
                 <div class="dropdown-menu " aria-labelledby="dropdownMenuLink" style="border-radius:10px;">
+                    <div id="responsiveMenu">
+                        <a class="dropdown-item" style="color:#4D96C2" href="cover.html">Inicio</a>
+                        <a class="dropdown-item" style="color:#4D96C2" href="categories.html">Categorías</a>
+                        <a class="dropdown-item" style="color:#4D96C2" href="products.html">Productos</a>
+                        <a class="dropdown-item" style="color:#4D96C2" href="sell.html">Vender</a>
+                    </div>
                     <a class="dropdown-item" style="color:#4D96C2" href="my-profile.html">Mi Perfil</a>
                     <a class="dropdown-item" style="color:#4D96C2" href="cart.html">Carrito de Compra</a>
                     <a class="dropdown-item" style="color:#4D96C2" onclick="signOut();" id="LogOut"
                         style="cursor: pointer; border-radius:50px;">Cerrar Sesión</a>
-
+                   
                 </div>
             </div>
 
         </div>
     </nav>
-
-    <main role="main" class="pb-5">
-
-        <div class="hit-the-floor">Productos</div>
-        
-        <div class="container">
-
-
-            <div class="row">
-
-
-
-                <div>
-                    <input class="form-control" type="text" placeholder="Search ..." id="search">
-                    <button class="btn " id="btn" style="display:none"></button>
-                </div>
-                
-                <div class="col text-right">
-
-                    <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
-                      
-                        <label class="btn btn-light active" id="sortAsc" >
-                            <input type="radio" name="options" autocomplete="off" checked >Rel. ASC.
-                        </label>
-                         
-                        <label class="btn btn-light" id="sortDesc">
-                            <input type="radio" name="options" autocomplete="off">Costo DESC.
-                        </label>
-
-                        <label class="btn btn-light" id="sortByCount">
-                            
-                            <input type="radio" name="options" autocomplete="off"><i
-                                class="fas fa-sort-amount-down mr-1"></i>Costo ASC.
-                        </label>
-                        
-                       
-                    </div>
-                </div>
+    <main role="main" class="pb-5 container">
+        <div class="row">
+            <div class="hit-the-floor col">Productos</div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <input class="form-control" type="text" placeholder="Search ..." id="search">
+                <button class="btn " id="btn" style="display:none"></button>
             </div>
 
+            <div class="col-md-2 text-right">
 
-            <div class="row justify-content-end">
-                <div class="col-md-6"></div>
-                <div class="col-md-6 col-sm-12 mb-1 container">
-                    <div class="row container p-0 m-0">
-                        
-                        <div class="col">
-                            <p class="font-weight-normal text-right my-2">Costo :</p>
-                        </div>
-                        <div class="col">
-                            <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
-                        </div>
-                        <div class="col">
-                            <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
-                        </div>
-                        <div class="col-3 p-0">
-                            <div class="btn-group" role="group">
-                                <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
-                                <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+                <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
 
-                            </div>
-                          
-                        </div>
-                       
-                    </div>
+                    <label class="btn btn-light active" id="sortAsc">
+                        <input type="radio" name="options" autocomplete="off" checked>Rel. ASC.
+                    </label>
+
+                    <label class="btn btn-light" id="sortDesc">
+                        <input type="radio" name="options" autocomplete="off">Costo DESC.
+                    </label>
+
+                    <label class="btn btn-light" id="sortByCount">
+
+                        <input type="radio" name="options" autocomplete="off"><i
+                            class="fas fa-sort-amount-down mr-1"></i>Costo ASC.
+                    </label>
                 </div>
-               
-            </div>
-            <div class="row">
-                <div class="list-group" id="cat-list-container">
-                </div>
+
             </div>
         </div>
-    </main>
-    <div class="container">
+        
+        <div class="row justify-content-end">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 col-sm-12 mb-1 container">
+                <div class="row  p-0 m-0">
 
+                    <div class="col">
+                        <p class="font-weight-normal text-right my-2">Costo :</p>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="number" placeholder="min."
+                            id="rangeFilterCountMin">
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="number" placeholder="máx."
+                            id="rangeFilterCountMax">
+                    </div>
+                    <div class="col-3 p-0">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                            <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
 
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="list-group" id="cat-list-container">
+            </div>
+        </div>
         <div class="row">
 
             <div class="row align-items-center " id="cat-list-container">
 
             </div>
 
-        </div>
-    </div>
+       </div>
+
     </main>
-    <div id="spinner-wrapper">
-        <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
+
     <footer class="text-muted bg-light">
-        <div class="container">
-          <p class="float-right">
-            <a href="#">Volver arriba</a>
-          </p>
-          <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-          <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+        <div class="container-fluid">
+            <p class="float-right">
+                <a href="#">Volver arriba</a>
+            </p>
+            <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+            <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
         </div>
-      </footer>
+    </footer>
+
+    
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
